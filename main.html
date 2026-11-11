@@ -10,50 +10,183 @@
 
 <body>
     <div class="container">
-        <aside class="sidebar">
-            <div class="content">
-                <div class="sidebra--content">
-                    <div class="sidebra--content__top">
-                        <img src="assets/icons/wallet.png" alt="" srcset="" width="45px">
-                        <p>Finora</p>
-                        <span>Expense Tracker</span>
+
+        <!-- Header -->
+        <header class="header">
+            <div class="header__content">
+                <div class="header__top">
+
+                    <div class="header__left">
+                        <img src="assets/icons/icons8-wallet-96.png" alt="" class="header__icon">
+
+                        <div class="header__title">
+                            <h1>Expense Tracker</h1>
+                            <span>Track your money, reach your goals</span>
+                        </div>
                     </div>
-                    <div class="sidebra--content__center">
-                        <ul class="menu">
-                            <li class="menu--list active">
-                                <img src="assets/icons/icons8-home-32.png" alt="">
-                                <span>Dashboard</span>
-                            </li>
-                            <li class="menu--list">
-                                <img src="assets/icons/transaction.png" alt="">
-                                <span>Transaction</span>
-                            </li>
-                            <li class="menu--list">
-                                <img src="assets/icons/graph.png" alt="">
-                                <span>Analytics</span>
-                            </li>
-                            <li class="menu--list">
-                                <img src="assets/icons/pie-chart.png" alt="">
-                                <span>Budgets</span>
-                            </li>
-                            <li class="menu--list">
-                                <img src="assets/icons/category.png" alt="">
-                                <span>Categories</span>
-                            </li>
-                            <li class="menu--list">
-                                <img src="assets/icons/settings.png" alt="">
-                                <span>Settings</span>
-                            </li>
-                        </ul>
+
+                    <div class="header__right">
+                        <img src="assets/icons/icon-date.png" alt="">
+                        <p>Nov 9, 2026</p>
                     </div>
-                    <div class="sidebra--content__bottom"></div>
+
                 </div>
             </div>
-        </aside>
-        <main class="main"></main>
-    </div>
+        </header>
 
-    <script src="assets/scripts/script.js"></script>
+        <!-- Dashboard -->
+        <main class="dashboard">
+
+            <!-- Financial Cards -->
+            <section class="financial-cards">
+
+                <div class="balance-card">
+                    <div class="card__content">
+                        <p>Your Balance</p>
+                        <span>$2,450.00</span>
+                    </div>
+
+                    <div class="card__icon">
+                        <img src="assets/icons/trending-up.png" alt="">
+                    </div>
+                </div>
+
+                <div class="income-card">
+                    <div class="card__content">
+                        <p>Total Income</p>
+                        <span>$3,200.00</span>
+                    </div>
+
+                    <div class="card__icon">
+                        <img src="assets/icons/arrow-up.png" alt="">
+                    </div>
+                </div>
+
+                <div class="expense-card">
+                    <div class="card__content">
+                        <p>Total Expense</p>
+                        <span>$750.00</span>
+                    </div>
+
+                    <div class="card__icon">
+                        <img src="assets/icons/arrow-down.png" alt="">
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- Add Transaction & Expense Overview -->
+            <section class="dashboard__content">
+
+                <!-- Add Transaction -->
+                <section class="add-transaction">
+
+                    <div class="add-transaction__header">
+                        <button type="button">+</button>
+                        <h2>Add Transaction</h2>
+                    </div>
+
+                    <form class="transaction-form">
+
+                        <div class="transaction-form__fields">
+
+                            <div class="form-field">
+                                <img src="assets/icons/file-text.png" alt="">
+                                <input type="text" id="description" placeholder="Enter description">
+                            </div>
+
+                            <div class="form-field">
+                                <img src="assets/icons/dollar-sign.png" alt="">
+                                <input type="number" id="amount" placeholder="Amount" min="0" step="any">
+                            </div>
+
+                        </div>
+
+                        <div class="transaction-form__actions">
+                            <button type="button" class="income-button">
+                                Income
+                            </button>
+
+                            <button type="button" class="expense-button">
+                                Expense
+                            </button>
+
+                            <button type="submit" class="add-button">
+                                Add Transaction
+                            </button>
+                        </div>
+
+                    </form>
+
+                </section>
+
+                <!-- Expense Overview -->
+                <section class="expense-overview">
+
+                    <div class="expense-overview__header">
+                        <img src="assets/icons/chart-no-axes-column-increasing.png" alt="">
+                        <h2>Expense Overview</h2>
+                    </div>
+
+                    <div class="expense-overview__content">
+
+                        <div class="expense-overview__chart">
+                            <!-- Chart will be added later -->
+                        </div>
+
+                        <div class="expense-overview__details">
+                            <p>Income: $3,200</p>
+                            <p>Expense: $750</p>
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </section>
+
+            <!-- Transactions -->
+            <section class="transactions">
+
+                <div class="transactions__header">
+
+                    <div class="transactions__title">
+                        <img src="" alt="">
+                        <h2>Transactions</h2>
+                    </div>
+
+                    <div class="transactions__filters">
+                        <button type="button" class="filter-button active">
+                            All
+                        </button>
+
+                        <button type="button" class="filter-button">
+                            Income
+                        </button>
+
+                        <button type="button" class="filter-button">
+                            Expense
+                        </button>
+
+                        <button type="button" class="clear-button">
+                            Clear All
+                        </button>
+                    </div>
+
+                </div>
+
+                <!-- Transaction List -->
+                <ul class="transactions__list" id="transactions-list">
+
+                    <!-- Transactions will be rendered by JavaScript -->
+
+                </ul>
+
+            </section>
+
+        </main>
+
+    </div>
 </body>
 
 </html>

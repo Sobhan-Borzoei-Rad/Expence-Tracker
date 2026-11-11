@@ -1,0 +1,32 @@
+{
+  "transactions": [
+    {
+      "id": "1",
+      "description": "Salary",
+      "amount": 3200,
+      "type": "income",
+      "date": "2026-11-11"
+    },
+    {
+      "id": "2",
+      "description": "Shopping",
+      "amount": 500,
+      "type": "expense",
+      "date": "2026-11-11"
+    },
+    {
+      "id": "3",
+      "description": "Internet",
+      "amount": 250,
+      "type": "expense",
+      "date": "2026-11-10"
+    },
+    {
+      "id": "4",
+      "description": "Freelance",
+      "amount": 1500,
+      "type": "income",
+      "date": "2026-11-09"
+    }
+  ]
+}
