@@ -87,10 +87,27 @@ body {
 .balance-card,
 .income-card,
 .expense-card {
-    background-color: #111A33;
     border-radius: 16px;
     padding: 20px;
     min-height: 140px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.income {
+    background: linear-gradient(135deg, #063B31, #092C32);
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.expense {
+    background: linear-gradient(135deg, #3B172B, #21152F);
+    border-radius: 16px;
+    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
